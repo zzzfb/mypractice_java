@@ -11,7 +11,7 @@ public class MergeSortedList {
             //return head1;
             return head2;
         }
-        if(head2==null&&head1!=null){  //无需判断head1，直接返回head2即可
+        if(head2==null){  //无需判断head1，直接返回head2即可
             //head2.next=head1;
             //return head2;
             return head1;
