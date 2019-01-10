@@ -1,9 +1,9 @@
 package 二叉树的深度;
 
-import 树的遍历.BinTreeNode;
+import 树的遍历.BinNode;
 
 public class TreeDepth {
-    public int treeDepth(BinTreeNode root){
+    public int treeDepth(BinNode root){
         if(root==null)
             return 0;
         /*if(root.left==null&&root.right==null){  //不需要额外判断

@@ -1,27 +1,32 @@
-package 树的遍历.中序遍历;
+package 树的遍历.前序遍历;
 
 import 树的遍历.BinNode;
 
 import java.util.Stack;
 
-public class MidTrav {
-    public void midTrav(BinNode root){
+public class PreTrav {
+    public void preTrav(BinNode root){
         if(root==null)
             return;
-
         Stack<BinNode> stack=new Stack<>();
         BinNode node=root;
-
         while (node!=null||!stack.isEmpty()){
             while (node!=null){
                 stack.push(node);
+                System.out.print(node.val+" ");
                 node=node.left;
             }
             if(!stack.isEmpty()){
-                node=stack.pop();
-                System.out.println(node.val);
-                node=node.right;
+                node=stack.pop().right;
             }
         }
+    }
+
+    public void preTravRev(BinNode root){
+        if(root==null)
+            return;
+        System.out.print(root.val+" ");
+        preTravRev(root.left);
+        preTravRev(root.right);
     }
 }
