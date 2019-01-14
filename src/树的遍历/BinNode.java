@@ -5,6 +5,10 @@ public class BinNode {
     public BinNode left;
     public BinNode right;
 
+    public BinNode(){
+
+    }
+
     public BinNode(int val){
         this.val=val;
     }
