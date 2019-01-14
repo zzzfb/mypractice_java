@@ -1,6 +1,8 @@
 package 树的遍历;
 
 import 树的遍历.前序遍历.PreTrav;
+import 树的遍历.后序遍历.PostTrav;
+import 树的遍历.层序遍历.LevelTrav;
 
 public class TravTest {
     public static void main(String[] args){
@@ -15,6 +17,14 @@ public class TravTest {
         PreTrav pre=new PreTrav();
         pre.preTrav(root);
         System.out.println();
-        pre.preTravRev(root);
+        pre.preTravRec(root);
+        System.out.println();
+
+        PostTrav post=new PostTrav();
+        post.postTrav(root);
+        System.out.println();
+
+        LevelTrav level=new LevelTrav();
+        level.levelTrav(root);
     }
 }

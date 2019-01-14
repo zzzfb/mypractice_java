@@ -24,4 +24,12 @@ public class MidTrav {
             }
         }
     }
+
+    public void midTravRec(BinNode root){
+        if(root==null)
+            return;
+        midTravRec(root.left);
+        System.out.println(root.val);
+        midTravRec(root.right);
+    }
 }

@@ -22,11 +22,11 @@ public class PreTrav {
         }
     }
 
-    public void preTravRev(BinNode root){
+    public void preTravRec(BinNode root){
         if(root==null)
             return;
         System.out.print(root.val+" ");
-        preTravRev(root.left);
-        preTravRev(root.right);
+        preTravRec(root.left);
+        preTravRec(root.right);
     }
 }
