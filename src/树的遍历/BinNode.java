@@ -4,6 +4,7 @@ public class BinNode {
     public int val;
     public BinNode left;
     public BinNode right;
+    public BinNode parent;
 
     public BinNode(){
 
