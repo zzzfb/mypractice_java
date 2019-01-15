@@ -34,12 +34,3 @@ public class QuickSort {
     }
 
 }
-
-class QuickSortTest {
-    public static void main(String[] args) {
-        int[] a = {26, 3, 5, 85, 43, 22, 65, 48, 32, 19,43};
-        QuickSort qs = new QuickSort();
-        qs.quickSort(a);
-        System.out.println(Arrays.toString(a));
-    }
-}
