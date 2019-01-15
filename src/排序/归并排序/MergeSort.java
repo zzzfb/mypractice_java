@@ -1,4 +1,4 @@
-package 归并排序;
+package 排序.归并排序;
 
 import java.util.Arrays;
 

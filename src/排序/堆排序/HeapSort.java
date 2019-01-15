@@ -1,4 +1,4 @@
-package 堆排序;
+package 排序.堆排序;
 
 import java.util.Arrays;
 
