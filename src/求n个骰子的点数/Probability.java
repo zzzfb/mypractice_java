@@ -1,4 +1,4 @@
-package n个骰子的点数;
+package 求n个骰子的点数;
 
 public class Probability {
     public void getProbability(int n){
