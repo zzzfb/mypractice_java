@@ -15,18 +15,18 @@ public class TravTest {
         root.right.left = new BinNode(6);
         root.right.right = new BinNode(7);
 
-        PreTrav pre = new PreTrav();
-        pre.preTrav(root);
-        System.out.println();
-        pre.preTravRec(root);
-        System.out.println();
-
-        PostTrav post = new PostTrav();
-        post.postTrav(root);
-        System.out.println();
+//        PreTrav pre = new PreTrav();
+//        pre.preTrav(root);
+//        System.out.println();
+//        pre.preTravRec(root);
+//        System.out.println();
+//
+//        PostTrav post = new PostTrav();
+//        post.postTrav(root);
+//        System.out.println();
 
         LevelTrav level = new LevelTrav();
-        level.levelTrav(root);
+        level.levelTravByRow(root);
 
         BuildTree build = new BuildTree();
         int[] a = {1, 2, 3};

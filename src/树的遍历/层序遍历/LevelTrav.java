@@ -23,4 +23,25 @@ public class LevelTrav {
             }
         }
     }
+
+    public void levelTravByRow(BinNode root){
+        if(root==null)
+            return;
+        ArrayDeque<BinNode> q=new ArrayDeque<>();
+        BinNode node=root;
+        BinNode lastNode=root;
+        q.offer(node);
+        while (!q.isEmpty()){
+            node=q.poll();
+            System.out.print(node.val+" ");
+            if(node.left!=null)
+                q.offer(node.left);
+            if(node.right!=null)
+                q.offer(node.right);
+            if(node==lastNode){
+                System.out.println();
+                lastNode=q.peekLast();
+            }
+        }
+    }
 }

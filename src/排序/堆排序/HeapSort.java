@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class HeapSort {
     public static void main(String[] args){
         int[] a={1,3,5,8,6,23,11,35};
-        heapSort(a);
+        heapSort2(a);
         System.out.println(Arrays.toString(a));
     }
 
@@ -50,5 +50,35 @@ public class HeapSort {
         int temp=a[i];
         a[i]=a[j];
         a[j]=temp;
+    }
+
+    public static void heapSort2(int[] a){
+        if(a==null||a.length<=1)
+            return;
+        createHeap2(a);
+        for(int i=0;i<a.length;i++){  //第一个始终是是最小元素，每次置于尾部，换后从头开始下沉
+            //缺少步骤
+            sink2(a,i);
+        }
+    }
+
+    public static void createHeap2(int[] a){
+        int mid=a.length>>1;
+        for (int i=mid;i>=0;i--){
+            sink2(a,i);
+        }
+    }
+
+    public static void sink2(int[] a,int i){   //长度每次少1，没控制边界
+        while (2*i+1<a.length){
+            int maxIndex=2*i+1;
+            if(2*i+2<a.length&&a[2*i+1]<a[2*i+2]){
+                maxIndex=2*i+2;
+            }
+            if(a[i]>a[maxIndex]){
+                swap(a,i,maxIndex);
+                i=maxIndex;
+            }
+        }
     }
 }

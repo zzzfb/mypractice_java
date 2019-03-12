@@ -1,6 +1,7 @@
 package 排序;
 
 import 排序.冒泡排序.BubbleSort;
+import 排序.堆排序.HeapSort;
 import 排序.快速排序.QuickSort;
 import 排序.插入排序.InsertSort;
 import 排序.选择排序.SelectSort;
@@ -27,6 +28,11 @@ public class SortTest {
         QuickSort quick=new QuickSort();
         quick.quickSort(a);
         System.out.println(Arrays.toString(a));
+
+        HeapSort heat=new HeapSort();
+        heat.heapSort2(a);
+        System.out.println(Arrays.toString(a));
+
 
     }
 }
